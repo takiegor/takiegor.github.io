@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>data science basics.</title>
+        <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/gif"/>
+        <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body style="font-family:PT Sans">
+      <div id="header">
+       <div class="logo">
+        <a href="index.html"><img src="images/logo.png" width="400" height="150" alt="logo"></a>
+       </div>
+      </div>
+        <div class="sticky">
+          <nav>
+            <ul>
+              <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">About<img src="images/light-bulb.png" alt="about" width="30" height="30"></a>
+              <div class="dropdown-content">
+                <a href="index.html">What is Data Science?</a>
+                <a href="whofor.html">Who this resource for?</a>
+                <a href="whypython.html">Why Python?</a>
+              </div>
+              </li>
+              <li><a href="ipython.html" class="active">iPython <img src="images/jupyter-logo.png" alt="jupyter" width="30" height="30"></a></li>
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Libraries <img src="images/python-logo.png" alt="python" width="30" height="30"></a>
+                <div class="dropdown-content">
+                  <a href="numpy.html">NumPy</a>
+                  <a href="pandas.html">Pandas</a>
+                  <a href="matplotlib.html">Matplotlib</a>
+                  <a href="scikit-learn.html">scikit-Learn</a>
+                  <a href="pytorch.html">PyTorch</a>
+                </div>
+              </li>
+              <li><a href="contacts.html">Contacts <img src="images/contact-info.png" alt="jupyter" width="30" height="30"></a></li>
+              <li><a href="https://habr.com/ru/company/ods/blog/">Community <img src="images/ods_logo.png" alt="community" width="30" height="30"></a></li>
+              <li><a href="feedback.html">Feedback <img src="images/satisfaction.png" alt="feedback" width="30" height="30"></a></li>
+
+            </ul>
+          </nav>
+          </div>
+
+  <main>
+
+<div class="right">
+  <h1 class="head">IPython: Beyond Normal Python</h1>
+  <p class="paragragh">There are many options for development environments for Python, and I’m often
+asked which one I use in my own work. My answer sometimes surprises people: my
+preferred environment is IPython plus a text editor (in my case, Emacs or Atom
+depending on my mood). IPython (short for Interactive Python) was started in 2001
+by Fernando Perez as an enhanced Python interpreter, and has since grown into a
+project aiming to provide, in Perez’s words, “Tools for the entire lifecycle of research
+computing.” If Python is the engine of our data science task, you might think of IPython
+as the interactive control panel.</p>
+<p class="paragragh">As well as being a useful interactive interface to Python, IPython also provides a
+  number of useful syntactic additions to the language; we’ll cover the most useful of
+  these additions here. In addition, IPython is closely tied with the Jupyter project,
+  which provides a browser-based notebook that is useful for development, collaboration,
+  sharing, and even publication of data science results. The IPython notebook is
+  actually a special case of the broader Jupyter notebook structure, which encompasses
+  notebooks for Julia, R, and other programming languages. As an example of the usefulness
+  of the notebook format, look no further than the page you are reading: the
+  entire manuscript for this book was composed as a set of IPython notebooks.</p>
+<p class="paragragh">IPython is about using Python effectively for interactive scientific and data-intensive
+  computing. This chapter will start by stepping through some of the IPython features
+  that are useful to the practice of data science, focusing especially on the syntax it
+  offers beyond the standard features of Python. Next, we will go into a bit more depth
+  on some of the more useful “magic commands” that can speed up common tasks in
+  creating and using data science code. Finally, we will touch on some of the features of
+  the notebook that make it useful in understanding data and sharing results.</p>
+  <h1 class="head">Shell or Notebook?</h1>
+<p class="paragragh">There are two primary means of using IPython that we’ll discuss in this chapter: the
+  IPython shell and the IPython notebook. The bulk of the material in this chapter is
+  relevant to both, and the examples will switch between them depending on what is
+  most convenient. In the few sections that are relevant to just one or the other, I will
+  explicitly state that fact. Before we start, some words on how to launch the IPython
+  shell and IPython notebook.</p>
+  <h1 class="head">Launching the IPython Shell</h1>
+  <p class="paragragh">This chapter, like most of this book, is not designed to be absorbed passively. I recommend
+    that as you read through it, you follow along and experiment with the tools and
+    syntax we cover: the muscle-memory you build through doing this will be far more
+    useful than the simple act of reading about it. Start by launching the IPython interpreter
+    by typing ipython on the command line; alternatively, if you’ve installed a distribution
+    like Anaconda or EPD, there may be a launcher specific to your system
+    (we’ll discuss this more fully in “Help and Documentation in IPython” on page 3).</p>
+  <p class="paragragh">Once you do this, you should see a prompt like the following:</p>
+  <code><pre>
+      IPython 4.0.1 -- An enhanced Interactive Python.
+      ? -> Introduction and overview of IPython's features.
+      %quickref -> Quick reference.
+      help -> Python's own help system.
+      object? -> Details about 'object', use 'object??' for extra details.
+      In [1]:</pre></code>
+  <p class="paragragh">With that, you’re ready to follow along.</p>
+  <h1 class="head">Launching the Jupyter Notebook</h1>
+<p class="paragragh">The Jupyter notebook is a browser-based graphical interface to the IPython shell, and
+  builds on it a rich set of dynamic display capabilities. As well as executing Python/
+  IPython statements, the notebook allows the user to include formatted text, static and
+  dynamic visualizations, mathematical equations, JavaScript widgets, and much more.
+  Furthermore, these documents can be saved in a way that lets other people open them
+  and execute the code on their own systems.</p>
+<p class="paragragh">Though the IPython notebook is viewed and edited through your web browser window,
+  it must connect to a running Python process in order to execute code. To start
+  this process (known as a “kernel”), run the following command in your system shell:</p>
+<code><pre>
+      $ jupyter notebook</pre></code>
+<p class="paragragh">This command will launch a local web server that will be visible to your browser. It
+  immediately spits out a log showing what it is doing; that log will look something like
+  this:</p>
+  <code><pre>
+      $ jupyter notebook
+      [NotebookApp] Serving notebooks from local directory: /Users/jakevdp/...
+      [NotebookApp] 0 active kernels
+      [NotebookApp] The IPython Notebook is running at: http://localhost:8888/
+      [NotebookApp] Use Control-C to stop this server and shut down all kernels...</pre></code>
+<p class="paragragh">Upon issuing the command, your default browser should automatically open and
+    navigate to the listed local URL; the exact address will depend on your system. If the
+    browser does not open automatically, you can open a window and manually open this
+    address (http://localhost:8888/ in this example).
+    </p>
+<a href="#" title="Get to the top!" class="topbutton">GO UP!</a>
+  </div>
+</main>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+  <p class="txtchanger" style="font-size:20px"> Here should have been some important information, but it is only data-collecting form</p>
+    <div class="container">
+      <form name="myForm" action="http://g06u33.nn2000.info/cgi-bin/form_action.py" target='_blank' method='get'>
+        <p class="txtchanger" style="font-size:20px;color:black">Stay tuned, subscribe to our mailing:</p>
+        <label for="lname" style="color:black">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name" required>
+
+        <label for="fname" style="color:black">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name" required>
+
+        <label for="number" style="color:black">Phone Number</label>
+        <input type="tel" id="number" name="phonenumber" pattern="(\+7)-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="+7-xxx-xxx-xx-xx" required>
+
+        <label for="email" style="color:black">Email</label>
+        <input type="email" id="email" name="electronicmail" placeholder="Your email" required>
+
+        <label for="datetime" style="color:black">Date</label>
+        <input type="date" id="datetime" name="date" required>
+
+        <input type="hidden" name="000_file_name" value="titov.txt">
+        <input type="hidden" name="010_mode" value="a">
+
+        <input type="submit" value="Submit">
+
+        <a href="http://g06u33.nn2000.info/tmp/titov.txt"><input type="Submit" name="read" value="Check Data"></a>
+      </form>
+    </div>
+  <p class="txtchanger" style="font-size:20px;text-align:left">@2021 <br>Copyright <strong>takiegor</strong></p>
+</footer>
+  </body>
+</html>

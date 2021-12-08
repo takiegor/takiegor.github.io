@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>data science basics.</title>
+        <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/gif"/>
+        <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body style="font-family:PT Sans;">
+      <div id="header">
+       <div class="logo">
+        <a href="index.html"><img src="images/logo.png" width="400" height="150" alt="logo"></a>
+       </div>
+      </div>
+        <div class="sticky">
+          <nav>
+            <ul>
+              <li class="dropdown" ><a href="javascript:void(0)" class="dropbtn" style="background-color:#cdddfe;color:black">About<img src="images/light-bulb.png" alt="about" width="30" height="30"></a>
+              <div class="dropdown-content">
+                <a href="index.html" >What is Data Science?</a>
+                <a href="whofor.html" class="active" >Who this resource for?</a>
+                <a href="whypython.html">Why Python?</a>
+              </div>
+              </li>
+              <li><a href="ipython.html">iPython <img src="images/jupyter-logo.png" alt="jupyter" width="30" height="30"></a></li>
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Libraries <img src="images/python-logo.png" alt="python" width="30" height="30"></a>
+                <div class="dropdown-content">
+                  <a href="numpy.html">NumPy</a>
+                  <a href="pandas.html">Pandas</a>
+                  <a href="matplotlib.html">Matplotlib</a>
+                  <a href="scikit-learn.html">scikit-Learn</a>
+                  <a href="pytorch.html">PyTorch</a>
+                </div>
+              </li>
+              <li><a href="contacts.html">Contacts <img src="images/contact-info.png" alt="jupyter" width="30" height="30"></a></li>
+              <li><a href="https://habr.com/ru/company/ods/blog/">Community <img src="images/ods_logo.png" alt="community" width="30" height="30"></a></li>
+              <li><a href="feedback.html">Feedback <img src="images/satisfaction.png" alt="feedback" width="30" height="30"></a></li>
+
+            </ul>
+          </nav>
+          </div>
+
+  <main>
+
+<div class="right">
+  <h1 class="head">Who Is This Book For?</h1>
+<p class="paragragh">In my teaching both at the University of Washington and at various tech-focused
+  conferences and meetups, one of the most common questions I have heard is this:
+  “how should I learn Python?” The people asking are generally technically minded
+  students, developers, or researchers, often with an already strong background in writing
+  code and using computational and numerical tools. Most of these folks don’t want
+  to learn Python per se, but want to learn the language with the aim of using it as a
+  tool for data-intensive and computational science. While a large patchwork of videos,
+  blog posts, and tutorials for this audience is available online, I’ve long been frustrated
+  by the lack of a single good answer to this question; that is what inspired this book.</p>
+<p class="paragragh">The book is not meant to be an introduction to Python or to programming in general;
+  I assume the reader has familiarity with the Python language, including defining
+  functions, assigning variables, calling methods of objects, controlling the flow of a
+  program, and other basic tasks. Instead, it is meant to help Python users learn to use
+  Python’s data science stack—libraries such as IPython, NumPy, Pandas, Matplotlib,
+  Scikit-Learn, and related tools—to effectively store, manipulate, and gain insight
+  from data.</p>
+<h1 class="head">Outline of This Book</h1>
+<p class="paragragh">Each chapter of this book focuses on a particular package or tool that contributes a
+    fundamental piece of the Python data science story.</p>
+  <ol class="list" style="border-radius:4px">
+    <li>
+      <ul class='list'>
+        <li class="list_elem"><a href="ipython.html" class="list_url">1. IPython and Jupyter</a></li>
+        <li class="list_elem">These packages provide the computational environment in which many Pythonusing
+            data scientists work.</li>
+      </ul>
+    </li>
+    <li>
+      <ul class='list'>
+        <li class="list_elem"><a href="numpy.html" class="list_url">2. NumPy</a></li>
+        <li class="list_elem">This library provides the ndarray object for efficient storage and manipulation of
+          dense data arrays in Python.</li>
+      </ul class='list'>
+    </li>
+  <li>
+      <ul class='list'>
+      <li class="list_elem"><a href="pandas.html" class="list_url">3. Pandas (Chapter 3)</a></li>
+      <li class="list_elem">This library provides the DataFrame object for efficient storage and manipulation
+        of labeled/columnar data in Python.</li>
+    </ul>
+  </li>
+    <li>
+      <ul class='list'>
+        <li class="list_elem"><a href="matplotlib.html" class="list_url">4. Matplotlib</a></li>
+        <li class="list_elem">This library provides capabilities for a flexible range of data visualizations in
+          Python</li>
+      </ul>
+    </li>
+    <li>
+      <ul class='list'>
+        <li class="list_elem"><a href="scikit-learn.html" class="list_url">5. Scikit-Learn</a></li>
+        <li class="list_elem">This library provides efficient and clean Python implementations of the most
+          important and established machine learning algorithms.</li>
+      </ul>
+    </li>
+    </ol>
+
+<p class="paragragh">
+The PyData world is certainly much larger than these five packages, and is growing
+every day. With this in mind, I make every attempt through these pages to provide
+references to other interesting efforts, projects, and packages that are pushing the
+boundaries of what can be done in Python. Nevertheless, these five are currently fundamental
+to much of the work being done in the Python data science space, and I
+expect they will remain important even as the ecosystem continues growing around
+them.</p>
+  </div>
+<img src="images/Python-Libraries-1024x683.png" alt="libraries" align='justify' class="fig">
+</main>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="#" title="Get to the top!" class="topbutton">GO UP!</a>
+<footer>
+  <p class="txtchanger" style="font-size:20px"> Here should have been some important information, but it is only data-collecting form</p>
+    <div class="container">
+      <form name="myForm" action="http://g06u33.nn2000.info/cgi-bin/form_action.py" target='_blank' method='get'>
+        <p class="txtchanger" style="font-size:20px;color:black">Stay tuned, subscribe to our mailing:</p>
+        <label for="lname" style="color:black">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name" required>
+
+        <label for="fname" style="color:black">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name" required>
+
+        <label for="number" style="color:black">Phone Number</label>
+        <input type="tel" id="number" name="phonenumber" pattern="(\+7)-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="+7-xxx-xxx-xx-xx" required>
+
+        <label for="email" style="color:black">Email</label>
+        <input type="email" id="email" name="electronicmail" placeholder="Your email" required>
+
+        <label for="datetime" style="color:black">Date</label>
+        <input type="date" id="datetime" name="date" required>
+
+        <input type="hidden" name="000_file_name" value="titov.txt">
+        <input type="hidden" name="010_mode" value="a">
+
+        <input type="submit" value="Submit">
+
+        <a href="http://g06u33.nn2000.info/tmp/titov.txt"><input type="Submit" name="read" value="Check Data"></a>
+      </form>
+    </div>
+  <p class="txtchanger" style="font-size:20px;text-align:left">@2021 <br>Copyright <strong>takiegor</strong></p>
+</footer>
+  </body>
+</html>

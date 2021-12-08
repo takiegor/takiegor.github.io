@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>data science basics.</title>
+        <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/gif"/>
+        <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body style="font-family:PT Sans">
+      <div id="header">
+       <div class="logo">
+        <a href="index.html"><img src="images/logo.png" width="400" height="150" alt="logo"></a>
+       </div>
+      </div>
+        <div class="sticky">
+          <nav>
+            <ul>
+              <li class="dropdown"><a href="javascript:void(0)" class="dropbtn" style="background-color:#cdddfe;color:black">About<img src="images/light-bulb.png" alt="about" width="30" height="30"></a>
+              <div class="dropdown-content">
+                <a href="index.html" class="active">What is Data Science?</a>
+                <a href="whofor.html">Who this resource for?</a>
+                <a href="whypython.html">Why Python?</a>
+              </div>
+              </li>
+              <li><a href="ipython.html">iPython <img src="images/jupyter-logo.png" alt="jupyter" width="30" height="30"></a></li>
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Libraries <img src="images/python-logo.png" alt="python" width="30" height="30"></a>
+                <div class="dropdown-content">
+                  <a href="numpy.html">NumPy</a>
+                  <a href="pandas.html">Pandas</a>
+                  <a href="matplotlib.html">Matplotlib</a>
+                  <a href="scikit-learn.html">scikit-Learn</a>
+                  <a href="pytorch.html">PyTorch</a>
+                </div>
+              </li>
+              <li><a href="contacts.html">Contacts <img src="images/contact-info.png" alt="jupyter" width="30" height="30"></a></li>
+              <li><a href="https://habr.com/ru/company/ods/blog/">Community <img src="images/ods_logo.png" alt="community" width="30" height="30"></a></li>
+              <li><a href="feedback.html">Feedback <img src="images/satisfaction.png" alt="feedback" width="30" height="30"></a></li>
+
+            </ul>
+          </nav>
+          </div>
+
+  <main>
+
+<div class="right">
+  <h1 class="head">What is Data Science?</h1>
+  <p class="paragragh">This is a book about doing data science with Python, which immediately begs the
+  question: what is data science? It’s a surprisingly hard definition to nail down, especially
+  given how ubiquitous the term has become. Vocal critics have variously dismissed
+  the term as a superfluous label (after all, what science doesn’t involve data?) or
+  a simple buzzword that only exists to salt résumés and catch the eye of overzealous
+  tech recruiters.
+  In my mind, these critiques miss something important. Data science, despite its hypeladen
+  veneer, is perhaps the best label we have for the cross-disciplinary set of skills
+  that are becoming increasingly important in many applications across industry and
+  academia. This cross-disciplinary piece is key: in my mind, the best existing definition
+  of data science is illustrated by Drew Conway’s Data Science Venn Diagram, first
+  published on his blog in September 2010 (see Figure P-1).</p>
+  <p class="fig">
+    <img src="images/figureP1.jpg" alt="figurep1" align=center>
+    <p class="fig" style="font-style:italic">Figure P-1. Drew Conway’s Data Science Venn Diagram</p>
+  </p>
+
+  <p class="paragragh">While some of the intersection labels are a bit tongue-in-cheek, this diagram captures
+  the essence of what I think people mean when they say “data science”: it is fundamentally
+  an interdisciplinary subject. Data science comprises three distinct and overlapping
+  areas: the skills of a statistician who knows how to model and summarize
+  datasets (which are growing ever larger); the skills of a computer scientist who can
+  design and use algorithms to efficiently store, process, and visualize this data; and the
+  domain expertise—what we might think of as “classical” training in a subject—necessary
+  both to formulate the right questions and to put their answers in context.</p>
+
+  <p class="paragragh">With this in mind, I would encourage you to think of data science not as a new
+  domain of knowledge to learn, but as a new set of skills that you can apply within
+  your current area of expertise. Whether you are reporting election results, forecasting
+  stock returns, optimizing online ad clicks, identifying microorganisms in microscope
+  photos, seeking new classes of astronomical objects, or working with data in any
+  other field, the goal of this book is to give you the ability to ask and answer new questions
+  about your chosen subject area.</p>
+
+  <p class="paragragh">Good luck in your studies!</p>
+  <a href="#" title="Get to the top!" class="topbutton">GO UP!</a>
+  </div>
+</main>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+  <p class="txtchanger" style="font-size:20px"> Here should have been some important information, but it is only data-collecting form</p>
+    <div class="container">
+      <form name="myForm" action="http://g06u33.nn2000.info/cgi-bin/form_action.py" target='_blank' method='get'>
+        <p class="txtchanger" style="font-size:20px;color:black">Stay tuned, subscribe to our mailing:</p>
+        <label for="lname" style="color:black">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name" required>
+
+        <label for="fname" style="color:black">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name" required>
+
+        <label for="number" style="color:black">Phone Number</label>
+        <input type="tel" id="number" name="phonenumber" pattern="(\+7)-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="+7-xxx-xxx-xx-xx" required>
+
+        <label for="email" style="color:black">Email</label>
+        <input type="email" id="email" name="electronicmail" placeholder="Your email" required>
+
+        <label for="datetime" style="color:black">Date</label>
+        <input type="date" id="datetime" name="date" required>
+
+        <input type="hidden" name="000_file_name" value="titov.txt">
+        <input type="hidden" name="010_mode" value="a">
+
+        <input type="submit" value="Submit">
+
+        <a href="http://g06u33.nn2000.info/tmp/titov.txt"><input type="Submit" name="read" value="Check Data"></a>
+      </form>
+    </div>
+  <p class="txtchanger" style="font-size:20px;text-align:left">@2021 <br>Copyright <strong>takiegor</strong></p>
+</footer>
+  </body>
+</html>

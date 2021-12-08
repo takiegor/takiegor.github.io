@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>data science basics.</title>
+        <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/gif"/>
+        <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body style="font-family:PT Sans">
+      <div id="header">
+       <div class="logo">
+        <a href="index.html"><img src="images/logo.png" width="400" height="150" alt="logo"></a>
+       </div>
+      </div>
+        <div class="sticky">
+          <nav>
+            <ul>
+              <li class="dropdown"><a href="javascript:void(0)" class="dropbtn">About<img src="images/light-bulb.png" alt="about" width="30" height="30"></a>
+              <div class="dropdown-content">
+                <a href="index.html">What is Data Science?</a>
+                <a href="whofor.html">Who this resource for?</a>
+                <a href="whypython.html">Why Python?</a>
+              </div>
+              </li>
+              <li><a href="ipython.html">iPython <img src="images/jupyter-logo.png" alt="jupyter" width="30" height="30"></a></li>
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn" style="background-color:#cdddfe;color:black">Libraries <img src="images/python-logo.png" alt="python" width="30" height="30"></a>
+                <div class="dropdown-content">
+                  <a href="numpy.html">NumPy</a>
+                  <a href="pandas.html" class="active">Pandas</a>
+                  <a href="matplotlib.html">Matplotlib</a>
+                  <a href="scikit-learn.html">scikit-Learn</a>
+                  <a href="pytorch.html">PyTorch</a>
+                </div>
+              </li>
+              <li><a href="contacts.html">Contacts <img src="images/contact-info.png" alt="jupyter" width="30" height="30"></a></li>
+              <li><a href="https://habr.com/ru/company/ods/blog/">Community <img src="images/ods_logo.png" alt="community" width="30" height="30"></a></li>
+              <li><a href="feedback.html">Feedback <img src="images/satisfaction.png" alt="feedback" width="30" height="30"></a></li>
+
+            </ul>
+          </nav>
+          </div>
+
+  <main>
+
+<div class="right">
+  <h1 class="head">Data Manipulation with Pandas</h1>
+  <p class="paragragh">In the previous chapter, we dove into detail on NumPy and its ndarray object, which
+  provides efficient storage and manipulation of dense typed arrays in Python. Here
+  we’ll build on this knowledge by looking in detail at the data structures provided by
+  the Pandas library. Pandas is a newer package built on top of NumPy, and provides an
+  efficient implementation of a DataFrame. DataFrames are essentially multidimensional
+  arrays with attached row and column labels, and often with heterogeneous
+  types and/or missing data. As well as offering a convenient storage interface for
+  labeled data, Pandas implements a number of powerful data operations familiar to
+  users of both database frameworks and spreadsheet programs.</p>
+
+  <p class="paragragh">As we saw, NumPy’s ndarray data structure provides essential features for the type of
+  clean, well-organized data typically seen in numerical computing tasks. While it
+  serves this purpose very well, its limitations become clear when we need more flexibility
+  (attaching labels to data, working with missing data, etc.) and when attempting
+  operations that do not map well to element-wise broadcasting (groupings, pivots,
+  etc.), each of which is an important piece of analyzing the less structured data available
+  in many forms in the world around us. Pandas, and in particular its Series and
+  DataFrame objects, builds on the NumPy array structure and provides efficient access
+  to these sorts of “data munging” tasks that occupy much of a data scientist’s time.</p>
+
+  <p class="paragragh">In this chapter, we will focus on the mechanics of using Series, DataFrame, and
+  related structures effectively. We will use examples drawn from real datasets where
+  appropriate, but these examples are not necessarily the focus.</p>
+
+  <h1 class="head">Installing and Using Pandas</h1>
+  <p class="paragragh">Installing Pandas on your system requires NumPy to be installed, and if you’re building
+  the library from source, requires the appropriate tools to compile the C and Python sources on which Pandas is built. Details on this installation can be found in
+  the Pandas documentation. If you followed the advice outlined in the preface and
+  used the Anaconda stack, you already have Pandas installed.</p>
+
+  <p class="paragragh">Once Pandas is installed, you can import it and check the version:</p>
+  <code><pre>
+    In[1]: import pandas
+    pandas.__version__
+    Out[1]: '0.18.1'</pre></code>
+
+  <p class="paragragh">Just as we generally import NumPy under the alias np, we will import Pandas under
+the alias pd:</p>
+<code><pre>
+    In[2]: import pandas as pd</pre></code>
+<p class="paragragh">This import convention will be used throughout the remainder of this book.</p>
+    <div style="border:2px solid black;">
+
+      <h3 class="head">Reminder About Built-In Documentation</h3>
+      <p class="paragragh" >As you read through this chapter, don’t forget that IPython gives you the ability to
+      quickly explore the contents of a package (by using the tab-completion feature) as
+      well as the documentation of various functions (using the ? character). (Refer back to
+      “Help and Documentation in IPython” on page 3 if you need a refresher on this.)</p>
+      <p class="paragragh">For example, to display all the contents of the pandas namespace, you can type this:</p>
+      <code><pre>
+          In [3]: pd.<TAB>
+        </pre></code>
+      <p class="paragragh">And to display the built-in Pandas documentation, you can use this:</p>
+      <code><pre>
+          In [4]: pd?</pre></code>
+      <p class="paragragh">More detailed documentation, along with tutorials and other resources, can be found
+        at <a href="http://pandas.pydata.org/" style="text-decoration:none;color:#017f96"><strong>http://pandas.pydata.org</strong>/</a>.</p>
+    </div>
+  </div>
+<a href="#" title="Get to the top!" class="topbutton">GO UP!</a>
+</main>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+  <p class="txtchanger" style="font-size:20px"> Here should have been some important information, but it is only data-collecting form</p>
+    <div class="container">
+      <form name="myForm" action="http://g06u33.nn2000.info/cgi-bin/form_action.py" target='_blank' method='get'>
+        <p class="txtchanger" style="font-size:20px;color:black">Stay tuned, subscribe to our mailing:</p>
+        <label for="lname" style="color:black">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name" required>
+
+        <label for="fname" style="color:black">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name" required>
+
+        <label for="number" style="color:black">Phone Number</label>
+        <input type="tel" id="number" name="phonenumber" pattern="(\+7)-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="+7-xxx-xxx-xx-xx" required>
+
+        <label for="email" style="color:black">Email</label>
+        <input type="email" id="email" name="electronicmail" placeholder="Your email" required>
+
+        <label for="datetime" style="color:black">Date</label>
+        <input type="date" id="datetime" name="date" required>
+
+        <input type="hidden" name="000_file_name" value="titov.txt">
+        <input type="hidden" name="010_mode" value="a">
+
+        <input type="submit" value="Submit">
+
+        <a href="http://g06u33.nn2000.info/tmp/titov.txt"><input type="Submit" name="read" value="Check Data"></a>
+      </form>
+    </div>
+  <p class="txtchanger" style="font-size:20px;text-align:left">@2021 <br>Copyright <strong>takiegor</strong></p>
+</footer>
+  </body>
+</html>

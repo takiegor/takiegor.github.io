@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>data science basics.</title>
+        <!-- favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/gif"/>
+        <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+  <body style="font-family:PT Sans">
+      <div id="header">
+       <div class="logo">
+        <a href="index.html"><img src="images/logo.png" width="400" height="150" alt="logo"></a>
+       </div>
+      </div>
+        <div class="sticky">
+          <nav>
+            <ul>
+              <li class="dropdown"><a href="javascript:void(0)" class="dropbtn" style="background-color:#cdddfe;color:black">About<img src="images/light-bulb.png" alt="about" width="30" height="30"></a>
+              <div class="dropdown-content">
+                <a href="index.html">What is Data Science?</a>
+                <a href="whofor.html">Who this resource for?</a>
+                <a href="whypython.html" class="active">Why Python?</a>
+              </div>
+              </li>
+              <li><a href="ipython.html">iPython <img src="images/jupyter-logo.png" alt="jupyter" width="30" height="30"></a></li>
+              <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Libraries <img src="images/python-logo.png" alt="python" width="30" height="30"></a>
+                <div class="dropdown-content">
+                  <a href="numpy.html">NumPy</a>
+                  <a href="pandas.html">Pandas</a>
+                  <a href="matplotlib.html">Matplotlib</a>
+                  <a href="scikit-learn.html">scikit-Learn</a>
+                  <a href="pytorch.html">PyTorch</a>
+                </div>
+              </li>
+              <li><a href="contacts.html">Contacts <img src="images/contact-info.png" alt="jupyter" width="30" height="30"></a></li>
+              <li><a href="https://habr.com/ru/company/ods/blog/">Community <img src="images/ods_logo.png" alt="community" width="30" height="30"></a></li>
+              <li><a href="feedback.html">Feedback <img src="images/satisfaction.png" alt="feedback" width="30" height="30"></a></li>
+
+            </ul>
+          </nav>
+          </div>
+
+  <main>
+
+<div class="right">
+  <h1 class='head'>Why Python?</h1>
+<p class="paragragh">Python has emerged over the last couple decades as a first-class tool for scientific
+  computing tasks, including the analysis and visualization of large datasets. This may
+  have come as a surprise to early proponents of the Python language: the language
+  itself was not specifically designed with data analysis or scientific computing in mind.</p>
+  <p class="paragragh">The usefulness of Python for data science stems primarily from the large and active
+ecosystem of third-party packages: NumPy for manipulation of homogeneous arraybased
+data, Pandas for manipulation of heterogeneous and labeled data, SciPy for
+common scientific computing tasks, Matplotlib for publication-quality visualizations,
+IPython for interactive execution and sharing of code, Scikit-Learn for machine
+learning, and many more tools that will be mentioned in the following pages.</p>
+<p class="paragragh">If you are looking for a guide to the Python language itself, I would suggest the sister
+project to this book, A Whirlwind Tour of the Python Language. This short report provides
+a tour of the essential features of the Python language, aimed at data scientists
+who already are familiar with one or more other programming languages.</p>
+<a href="images/bigimage.png" target="_blank"> <img src="images/bigimage.png" width=100 alt="bigimage"></a>
+
+<h1 class="head"> Python 2 Versus Python 3 </h1>
+<p class="paragragh">This book uses the syntax of Python 3, which contains language enhancements that
+are not compatible with the 2.x series of Python. Though Python 3.0 was first released
+in 2008, adoption has been relatively slow, particularly in the scientific and web development
+communities. This is primarily because it took some time for many of the
+essential third-party packages and toolkits to be made compatible with the new language
+internals. Since early 2014, however, stable releases of the most important tools
+in the data science ecosystem have been fully compatible with both Python 2 and 3,
+and so this book will use the newer Python 3 syntax. However, the vast majority of
+code snippets in this book will also work without modification in Python 2: in cases
+where a Py2-incompatible syntax is used, I will make every effort to note it explicitly.</p>
+  </div>
+<a href="#" title="Get to the top!" class="topbutton">GO UP!</a>
+</main>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+  <p class="txtchanger" style="font-size:20px"> Here should have been some important information, but it is only data-collecting form</p>
+    <div class="container">
+      <form name="myForm" action="http://g06u33.nn2000.info/cgi-bin/form_action.py" target='_blank' method='get'>
+        <p class="txtchanger" style="font-size:20px;color:black">Stay tuned, subscribe to our mailing:</p>
+        <label for="lname" style="color:black">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name" required>
+
+        <label for="fname" style="color:black">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name" required>
+
+        <label for="number" style="color:black">Phone Number</label>
+        <input type="tel" id="number" name="phonenumber" pattern="(\+7)-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" placeholder="+7-xxx-xxx-xx-xx" required>
+
+        <label for="email" style="color:black">Email</label>
+        <input type="email" id="email" name="electronicmail" placeholder="Your email" required>
+
+        <label for="datetime" style="color:black">Date</label>
+        <input type="date" id="datetime" name="date" required>
+
+        <input type="hidden" name="000_file_name" value="titov.txt">
+        <input type="hidden" name="010_mode" value="a">
+
+        <input type="submit" value="Submit">
+
+        <a href="http://g06u33.nn2000.info/tmp/titov.txt"><input type="Submit" name="read" value="Check Data"></a>
+      </form>
+    </div>
+  <p class="txtchanger" style="font-size:20px;text-align:left">@2021 <br>Copyright <strong>takiegor</strong></p>
+</footer>
+  </body>
+</html>
