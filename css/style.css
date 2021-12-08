@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap') ;
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: white;
+  font-family: "PT Sans";
+}
+html {
+  height: 100%;
+  margin: 0;
+
+
+}
+figure {
+  width: 27%;
+  float: left;
+  margin: 0 0 0 3.5%;
+  background: #f0f0f0;
+  border-radius: 5px;
+  padding: 2%;
+ }
+figure:first-child {
+  margin-left: 0;
+}
+figcaption {
+    text-align: center;
+   }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #017f96;
+  width: 100%;
+  color: white;
+  }
+
+img {
+  vertical-align: middle;
+}
+
+li {
+  float: left;
+  margin: auto;
+  padding: 0;
+  font-size: 30px;
+  color: white;
+}
+li:first-child {
+  margin-left: 0px
+}
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  border: 1px solid;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: #cdddfe;
+  color: black;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: none;
+}
+
+input[type=submit] {
+  background-color: #017f96;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+input[type=submit]:hover {
+  background-color: #cdddfe;
+  color: black;
+}
+
+footer {
+  text-align: left;
+  padding: 5px;
+  background-color: #017f96;
+  color: white;
+}
+footer a {
+  color:white;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #017f96;
+  width: 100%;
+  color: white;
+}
+
+footer li {
+
+}
+
+code {
+  background-color: #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: monospace;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+.dop tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* #cdddfe */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+}
+.sign {
+    float: right; /* Выравнивание по правому краю */
+    padding: 0; /* Поля внутри блока */
+    margin: 10px; /* Отступы вокруг */
+    text-align: center;
+    width: 352px;
+    height: 341px;
+   }
+ .topleft {
+   position: absolute;
+   top: 0;
+   left: 16px;
+ }
+
+ .bottomleft {
+   position: absolute;
+   bottom: 0;
+   left: 16px;
+ }
+
+ .middle {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+ }
+ .topright {
+   position: sticky;
+   left: 90%;
+   top: 0;
+ }
+ .logo {
+   position: relative;
+   margin: 0;
+   z-index: 1;
+
+   }
+
+ .fig {
+     text-align: center;
+    }
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+.chngtxt {
+  color:white;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: "PT sans", sans-serif;
+
+}
+
+.feedback {
+  border-radius: 4px;
+  background-color: #017f96;
+  width: auto;
+  height: auto;
+  padding: 2px;
+  color: black;
+}
+.feedback a{
+  color: white;
+}
+
+.feedback:hover {
+  background-color: #cdddfe;
+  color: black;
+}
+
+.feedback p:hover {
+  background-color: #cdddfe;
+  color: black;
+  width: auto;
+  height: auto;
+}
+
+.txtchanger {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.paragragh {
+  text-align:justify;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.right {
+  float: none;
+  width:75%;
+  margin-top: 40px;
+  margin-left: 40px;
+  text-align: justify;
+}
+
+.head {
+  padding: 5px;
+  margin-top: 30px;
+  margin-left: 30px;
+  font-size: 40px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.active {
+  background-color: #cdddfe;
+  color: black;
+}
+
+.list ul{
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+.list_elem li{
+  border: 1px solid #ddd; /* Add a thin border to each list item */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Add a grey background color */
+  padding: 12px; /* Add some padding */
+  float: left;
+  margin: auto;
+  padding: 0;
+  font-size: 30px;
+  color: white;
+}
+
+.list_url li a{
+
+}
+
+.list_elem li:first-child {
+  margin-left: 0px
+}
+.list_url li a, {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  border: 1px solid;
+}
+
+.list_url li a:hover{
+
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.list_urlhover li a:hover{
+  background-color: #cdddfe;
+  color: black;
+}
+
+.center-img {
+  display: block;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.topbutton {
+width:100px;
+border:2px;
+background: #cdddfe;
+text-align:center;
+padding:10px;
+position:fixed;
+bottom:50px;
+right:50px;
+font-size:20px;
+font-family: "Noto Sans", sans-serif;
+border-radius: 5px;
+text-decoration: none;
+
+}
