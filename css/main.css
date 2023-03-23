@@ -1,0 +1,19 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    max-width: 90%;
+    border-radius: 20px;
+    transition: 1s linear;
+  }
+
+
+  .spisok {
+    margin-top: 40px;
+  }
+
+  .krasivo {
+    background-image: url(krasivo.jpg);
+    background-size: 100%;
+  }
