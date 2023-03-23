@@ -174,7 +174,7 @@ body {
 }
 
 .standart-table {
-    background-image: url(../images/table-background.jpg);
+    background-image: url("https://i.ibb.co/xmXvqsF/table-background.jpg");
     background-position: center;
     background-size: cover;
     border: none;
