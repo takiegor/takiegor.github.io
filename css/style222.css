@@ -1,0 +1,142 @@
+.menu {
+    border: 1px groove black;
+    transition: .2s linear;
+    border-radius: 15px;
+    text-align: center;
+    background-image: url("fon.jpg");
+    background-size: 50%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.noCurrent {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    background: #000000;
+    min-width: 150px;
+    padding: 20px 30px;
+    margin: 15px;
+    border-radius: 10px;
+    transition: .1s linear;
+}
+
+.noCurrent:hover {
+    box-shadow: 500px 0 0 0 rgba(0, 0, 0, .3) inset;
+}
+
+.current {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    min-width: 150px;
+    padding: 20px 30px;
+    margin: 15px;
+    border-radius: 10px;
+    transition: .1s linear;
+    background: #ff009d;
+}
+
+.current:hover {
+    box-shadow: 500px 0 0 0 rgba(0, 0, 0, .3) inset;
+}
+
+h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ff009d;
+    background-clip: border-box;
+    border-radius: 20px;
+    padding: 7px 7px;
+    color: rgb(0, 0, 0);
+    max-width: 700px;
+}
+h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-clip: border-box;
+    border-radius: 5px;
+    padding: 7px 7px;
+    color: rgb(0, 0, 0);
+    max-width: 700px;
+}
+
+h3 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: #000000;
+    background-clip: border-box;
+    border-radius: 15px;
+    padding: 7px 7px;
+    color: white;
+    max-width: 500px;
+}
+
+h4 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-clip: border-box;
+    border-radius: 15px;
+    padding:7px 7px;
+    color: rgb(0, 0, 0);
+    max-width: 1000px;
+}
+
+.listik {
+    margin-top: 80px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-clip: border-box;
+    border-radius: 5px;
+    padding: 7px 7px;
+    color: rgb(145, 0, 108);
+    max-width: 700px;
+}
+.punktik {
+    margin-top: 80px;
+
+}
+
+.kartinka {
+    margin-top: 50px;
+}
+
+.table-3 {
+    margin-top: 33px;
+    margin-bottom: 33px;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+
+.comp {
+    height: 100px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    max-width: 90%;
+    border-radius: 20px;
+    transition: 1s linear;
+}
+
+.chpok {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+}
+
+figcaption {
+    text-align: center;
+    }
